@@ -161,11 +161,12 @@ class Presenter:
                     raise ValueError("Primero debe generar números con el método seleccionado.")
                 self.selected_ri_values = self.ms_method.ri_values_array
             elif tab_id == "Linear Congruential Method":
-                if not hasattr(self.lc_method, 'ri_values_array') or not self.lc_method.get_ri_values_array():
+                print(self.lc_method.get_ri_values_array())
+                if not hasattr(self.lc_method, 'ri_values') or not self.lc_method.get_ri_values_array():
                     raise ValueError("Primero debe generar números con el método seleccionado.")
                 self.selected_ri_values = self.lc_method.get_ri_values_array()
             elif tab_id == "Multiplicative Congruential Method":
-                if not hasattr(self.mcm_method, 'ri_values_array') or not self.mcm_method.get_ri_values_array():
+                if not hasattr(self.mcm_method, 'ri_values') or not self.mcm_method.get_ri_values_array():
                     raise ValueError("Primero debe generar números con el método seleccionado.")
                 self.selected_ri_values = self.mcm_method.get_ri_values_array()
         except ValueError as e:
