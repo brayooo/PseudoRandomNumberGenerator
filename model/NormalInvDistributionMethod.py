@@ -59,7 +59,6 @@ class NormalInvDistributionMethod:
         interval_size = self.intervals[1] - self.intervals[0] if len(self.intervals) > 1 else 1
 
         for number in filtered_ni_values:
-            print(number)
             interval_index = int((number - min_value) // interval_size)
             if interval_index >= self.intervals_amount:
                 interval_index = self.intervals_amount - 1  # Asegurarse de no exceder el índice máximo

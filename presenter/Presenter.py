@@ -143,7 +143,6 @@ class Presenter:
                 self.ud_method = self.model.execute_uniform_distribution_method(min_value, max_value,
                                                                                 self.selected_ri_values)
                 self.view.ud_tab.set_data(self.ud_method.get_ri_values_array(), self.ud_method.get_ni_values_array())
-                print(self.ud_method.get_ri_values_array())
                 self.view.ud_tab.update_table()
 
             self.model.write_pseudo_numbers(self.ud_method.get_ni_values_array(),
@@ -161,7 +160,6 @@ class Presenter:
                     raise ValueError("Primero debe generar números con el método seleccionado.")
                 self.selected_ri_values = self.ms_method.ri_values_array
             elif tab_id == "Linear Congruential Method":
-                print(self.lc_method.get_ri_values_array())
                 if not hasattr(self.lc_method, 'ri_values') or not self.lc_method.get_ri_values_array():
                     raise ValueError("Primero debe generar números con el método seleccionado.")
                 self.selected_ri_values = self.lc_method.get_ri_values_array()
