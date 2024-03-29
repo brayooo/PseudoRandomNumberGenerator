@@ -64,7 +64,7 @@ with python, go ahead.
 - Or you can run the file using the run configuration of your IDE.
 
 Perfect, if everything goes well and if you followed the steps you can see the user interface,
-you're reade to use the program to generate pseudo-random numbers.
+you're ready to use the program to generate pseudo-random numbers.
 
           
 ![interface](assets/interface.png)
