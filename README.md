@@ -2,6 +2,8 @@
 
 This program generate pseudo-random number by 5 methods: Mean squares, linear congruential method,
 multiplicative congruential, uniform and normal distribution methods. 
+
+### For use the program you should follow the next steps:
 ## Clone the Project
 
 1. Go to your desktop or an empty folder and right-click to display the pop-up 
