@@ -1,5 +1,7 @@
 import math
+from random import random
 
+import numpy as np
 from scipy.stats import norm
 
 
@@ -39,7 +41,7 @@ class NormalInvDistributionMethod:
             Este método calcula y almacena los valores de Ni basándose en los valores de Ri utilizando la distribución inversa de la normal.
         """
         for i in range(len(self.ri_values)):
-            #TODO cambiar round
+            # TODO cambiar round
             self.ni_values.append(round(norm.ppf(self.ri_values[i], loc=self.mean, scale=self.standard_deviation), 5))
 
     def fill_frequencies(self):
@@ -75,7 +77,7 @@ class NormalInvDistributionMethod:
             raise ValueError("intervals_amount must be greater than 1")
 
         _range = max(self.ni_values) - min(self.ni_values)
-        interval_length = _range / (self.intervals_amount - 1)
+        interval_length = _range / self.intervals_amount
         self.intervals[0] = min(self.ni_values)
         for i in range(1, self.intervals_amount):
             self.intervals[i] = self.intervals[i - 1] + interval_length
